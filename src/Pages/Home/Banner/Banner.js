@@ -6,7 +6,6 @@ import Box from '@mui/material/Box';
 
 const bannerBg = {
     background: `url(https://templates.envytheme.com/herobike/default/assets/img/home-bg-1.jpg)`
-
 }
 
 const verticalCenter = {
@@ -27,11 +26,11 @@ const Banner = () => {
             <Grid spacing={2}>
                 <Typography item style={{ ...verticalCenter, textAlign: 'center'}}  xs={12} md={12}>
                     <Box style={titleBg}>
-                        <Typography variant="h1" sx={{color: 'black', fontWeight: '400'}}>
+                        <Typography variant="h1" sx={{color: 'black', fontWeight: '400', fontFamily: 'cursive'}}>
                             Welcome To <br />
                             Our <span style={title}>Cycle House</span>
                         </Typography>
-                        <Button variant="contained" style={{ backgroundColor: '#5CE7ED', color: 'black' }}>Lern More</Button>
+                        <Button variant="contained" style={{ backgroundColor: '#5CE7ED', color: 'black', width: '300px', height: '50px', marginTop: '20px', fontSize: '2rem' }}>Lern More</Button>
                     </Box>
                 </Typography>
 

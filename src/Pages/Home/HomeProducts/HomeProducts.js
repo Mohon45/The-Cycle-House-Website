@@ -21,6 +21,13 @@ export default function HomeProducts() {
     }, []);
 
     const useStyle = makeStyles({
+        backgroundImg:{
+            // backgroundImage: URL('https://i.ibb.co/vzLfTbK/background.jpg')
+            backgroundImage: "url(" + "https://i.ibb.co/vzLfTbK/background.jpg" + ")",
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+        },
         image:{
             width: '100%'
         },
@@ -43,44 +50,47 @@ export default function HomeProducts() {
         }
     })
 
-    const {image,card, cardFooter, title, button} = useStyle()
+    const {image,card, cardFooter, title, button, backgroundImg} = useStyle()
 
     
     return (
-        <Container>
-            <Box sx={{ flexGrow: 1 }}>
-                <h2 className={title}>Our ByCycles</h2>
-                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 1, sm: 8 , md: 12 }}>
-                    {products.map(product => (
-                    <Grid item xs={2} sm={4} md={4} key={product._id}>
-                        <Card className={card}>
-                            <CardMedia
-                            component="img"
-                            image={product.img}
-                            className={image}
-                            />
-                            <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                {product.name}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {product.desc.slice(0,100)}
-                            </Typography>
-                            </CardContent>
-                            <CardActions className={cardFooter}>
-                                <Typography>Price:  ${product.price}</Typography>
-                                
-                                <Typography         className={button}>
-                                    <Link to={`/booking/${product._id}`}><Button>By Now</Button></Link>
+        <div>
+            <Container>
+                <Box sx={{ flexGrow: 1 }}>
+                    <h2 className={title}>Our ByCycles</h2>
+                    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 1, sm: 8 , md: 12 }}>
+                        {products.map(product => (
+                        <Grid item xs={2} sm={4} md={4} key={product._id}>
+                            <Card className={card}>
+                                <CardMedia
+                                component="img"
+                                image={product.img}
+                                className={image}
+                                />
+                                <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    {product.name}
                                 </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    {product.desc.slice(0,100)}
+                                </Typography>
+                                </CardContent>
+                                <CardActions className={cardFooter}>
+                                    <Typography>Price:  ${product.price}</Typography>
+                                    
+                                    <Typography         className={button}>
+                                        <Link to={`/booking/${product._id}`}><Button>By Now</Button></Link>
+                                    </Typography>
+                                    
+                                </CardActions>
                                 
-                            </CardActions>
-                            
-                        </Card>
+                            </Card>
+                        </Grid>
+                        ))}
                     </Grid>
-                    ))}
-                </Grid>
-            </Box>
-        </Container>
+                </Box>
+            </Container>
+        </div>
+        
     );
 };
