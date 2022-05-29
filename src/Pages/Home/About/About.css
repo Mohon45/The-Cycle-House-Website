@@ -1,0 +1,27 @@
+.single-card {
+  width: 18rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.icon-color {
+  color: #f7722b;
+}
+
+.footer-cust {
+  text-align: start;
+  margin-bottom: 20px;
+}
+.footer-cust a {
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .single-card {
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}

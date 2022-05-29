@@ -1,42 +1,21 @@
-import React from 'react';
-import Grid from '@mui/material/Grid';
-import { Typography, Button} from '@mui/material';
-import Box from '@mui/material/Box';
-
-
-const bannerBg = {
-    background: `url(https://templates.envytheme.com/herobike/default/assets/img/home-bg-1.jpg)`
-}
-
-const verticalCenter = {
-    height: 600
-}
-const title ={
-    fontWeight: 'bold',
-    color: '#113CFC'
-}
-const titleBg = {
-    backgroundColor: 'rgba(212, 241, 246, 0.41)'
-    
-}
+import { Button } from "bootstrap";
+import React from "react";
+import "./Banner.css";
 
 const Banner = () => {
-    return (
-        <Box style={bannerBg} sx={{ flexGrow: 1 }}>
-            <Grid spacing={2}>
-                <Typography item style={{ ...verticalCenter, textAlign: 'center'}}  xs={12} md={12}>
-                    <Box style={titleBg}>
-                        <Typography variant="h1" sx={{color: 'black', fontWeight: '400', fontFamily: 'cursive'}}>
-                            Welcome To <br />
-                            Our <span style={title}>Cycle House</span>
-                        </Typography>
-                        <Button variant="contained" style={{ backgroundColor: '#5CE7ED', color: 'black', width: '300px', height: '50px', marginTop: '20px', fontSize: '2rem' }}>Lern More</Button>
-                    </Box>
-                </Typography>
-
-            </Grid>
-        </Box>
-    );
+  return (
+    <div className="banner">
+      <div className="banner-title pt-2">
+        <h1>Welcome To</h1>
+        <h1 className="mb-5">
+          Our <span className="title-sp">Cycle House</span>
+        </h1>
+        <a href="/" className="banner-btn mt-3">
+          Lern More
+        </a>
+      </div>
+    </div>
+  );
 };
 
 export default Banner;

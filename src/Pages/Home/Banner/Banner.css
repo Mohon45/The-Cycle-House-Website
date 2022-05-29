@@ -1,0 +1,26 @@
+.banner {
+  background-image: url("https://templates.envytheme.com/herobike/default/assets/img/home-bg-1.jpg");
+  height: 600px;
+}
+.banner-title {
+  background-color: rgba(212, 241, 246, 0.41);
+}
+.title-sp {
+  color: #113cfc;
+  font-weight: bold;
+}
+.banner-title h1 {
+  font-family: "Lobster", cursive;
+  font-weight: bold;
+  font-size: 6rem;
+}
+.banner-title a {
+  text-decoration: none;
+  background-color: #5ce7ed;
+  color: black;
+  padding: 7px 40px 7px 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 5px;
+}

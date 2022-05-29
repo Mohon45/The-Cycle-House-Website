@@ -1,0 +1,46 @@
+.footer-bg {
+  background-image: url("https://i.ibb.co/jRVLZLP/footer-pattern.png");
+  color: white;
+}
+.footer-section-one h1 {
+  font-size: 2rem;
+}
+.play-store-img h2 {
+  font-size: 1.5rem;
+}
+.footer-section-two img {
+  width: 80%;
+}
+.footer-address {
+  width: 230px;
+  margin: auto;
+}
+.footer-address p {
+  text-align: left;
+}
+
+.quick-link-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100px;
+  margin: auto;
+}
+.quick-link-item a {
+  text-decoration: none;
+  color: white;
+  margin-top: 15px;
+}
+
+.social-link-item {
+  display: flex;
+  flex-direction: column;
+}
+.social-link-item a {
+  text-decoration: none;
+  color: white;
+  margin-top: 15px;
+}
+.footer-intro p {
+  margin: 0;
+}

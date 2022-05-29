@@ -1,0 +1,16 @@
+.single-review-card {
+  width: 18rem;
+  height: 20rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card-body img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.dynamic-rating {
+  width: 180px;
+  margin: auto;
+}
