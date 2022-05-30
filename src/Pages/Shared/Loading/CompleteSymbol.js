@@ -3,7 +3,7 @@ import "./Spinner.css";
 
 const CompleteSymbol = () => {
   return (
-    <div>
+    <div className="spinner">
       <div className="completed">&#x2713;</div>
     </div>
   );

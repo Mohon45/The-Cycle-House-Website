@@ -1,18 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import About from "../About/About";
 import Banner from "../Banner/Banner";
 import Homeproducts from "../HomeProducts/HomeProducts";
 import Review from "../Review/Review";
 import TechnicalSupport from "../TechnicalSupport/TechnicalSupport";
+import Spinner from "../../Shared/Loading/Spinner";
+import CompleteSymbol from "../../Shared/Loading/CompleteSymbol";
 
 const Home = () => {
+  const [loading, setLoading] = useState(false);
+  const [completed, setCompleted] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      axios
+        .get("https://secret-brook-42211.herokuapp.com/products")
+        .then((res) => {
+          if (res.status === 200) {
+            setLoading(true);
+
+            setTimeout(() => {
+              setCompleted(true);
+            }, 1000);
+          }
+        })
+        .catch((error) => {
+          console.log(error.response);
+        });
+    }, 2000);
+  }, []);
+
   return (
-    <div style={{ backgroundColor: "#E8E8E8" }}>
-      <Banner></Banner>
-      <Homeproducts></Homeproducts>
-      <TechnicalSupport></TechnicalSupport>
-      <Review></Review>
-      <About></About>
+    <div>
+      {!completed ? (
+        <>{!loading ? <Spinner /> : <CompleteSymbol />}</>
+      ) : (
+        <div style={{ backgroundColor: "#E8E8E8" }}>
+          <Banner></Banner>
+          <Homeproducts />
+          <TechnicalSupport></TechnicalSupport>
+          <Review></Review>
+          <About></About>
+        </div>
+      )}
     </div>
   );
 };

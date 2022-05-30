@@ -2,13 +2,21 @@ import React, { useEffect, useState } from "react";
 import "./Review.css";
 import { DynamicStar } from "react-dynamic-star";
 import Carousel from "react-elastic-carousel";
+import axios from "axios";
 const Review = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("https://secret-brook-42211.herokuapp.com/reviews")
-      .then((res) => res.json())
-      .then((data) => setReviews(data));
+    axios
+      .get("https://secret-brook-42211.herokuapp.com/reviews")
+      .then((res) => {
+        if (res.status === 200) {
+          setReviews(res.data);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response);
+      });
   }, []);
 
   const breakPoints = [

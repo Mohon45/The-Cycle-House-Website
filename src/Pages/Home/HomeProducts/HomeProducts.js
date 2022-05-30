@@ -1,11 +1,12 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { DynamicStar } from "react-dynamic-star";
 import "./HomeProducts.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const HomeProducts = () => {
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     axios
       .get("https://secret-brook-42211.herokuapp.com/products")
@@ -15,7 +16,7 @@ const HomeProducts = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.response);
       });
   }, []);
 
@@ -27,7 +28,7 @@ const HomeProducts = () => {
         <div class="row row-cols-1 row-cols-md-3 g-4">
           {products.map((item, index) => (
             <div class="col" key={index}>
-              <Link to="/" className="link-card">
+              <Link to={`/booking/${item._id}`} className="link-card">
                 <div class="card h-100 single-product hover-effect">
                   <img src={item.img} class="card-img-top" alt="..." />
                   <div class="card-body">
@@ -48,7 +49,7 @@ const HomeProducts = () => {
                   </div>
                   <div className="product-desc mb-3">
                     <h5>Price: $ {item.price}</h5>
-                    <Link className="by-btn" to="/">
+                    <Link className="by-btn" to={`/booking/${item._id}`}>
                       By Now
                     </Link>
                   </div>
