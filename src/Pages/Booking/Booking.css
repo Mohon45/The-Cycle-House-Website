@@ -1,0 +1,12 @@
+.left-side {
+  border-right: 1px solid #fa9430;
+}
+.product-top img {
+  width: 80%;
+}
+.product-description {
+  text-align: left;
+}
+.product-description p {
+  text-align: justify;
+}

@@ -28,7 +28,7 @@ const Home = () => {
         .catch((error) => {
           console.log(error.response);
         });
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (

@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
 
 const PawNow = () => {
-    return (
-        <div>
-            <h1>Peyment Method is Comming!!</h1>
-        </div>
-    );
+  return (
+    <div>
+      <img
+        width="100%"
+        src="https://i.ibb.co/DWjQ9p4/payment-comming-soon.png"
+        alt=""
+      />
+    </div>
+  );
 };
 
 export default PawNow;
