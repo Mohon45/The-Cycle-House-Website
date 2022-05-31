@@ -10,8 +10,8 @@ const Navbar = () => {
     <Fragment className="topbar">
       <nav className="navbar navbar-expand-lg header-bg-color">
         <div className="container">
-          <a className="navbar-brand nav-image" href="#">
-            <img src="https://i.ibb.co/Lk5gB1x/cycle-house-logo.png" alt="" />
+          <a className="navbar-brand nav-image" href="/">
+            <img src="https://i.ibb.co/Nm0ZJnQ/cycle-house-logo.png" alt="" />
           </a>
           <button
             className="navbar-toggler"
