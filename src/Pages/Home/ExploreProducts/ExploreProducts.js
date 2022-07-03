@@ -13,7 +13,7 @@ const ExploreProducts = () => {
   useEffect(() => {
     setTimeout(() => {
       axios
-        .get("https://secret-brook-42211.herokuapp.com/products")
+        .get("https://arcane-atoll-77815.herokuapp.com/products")
         .then((res) => {
           if (res.status === 200) {
             setProducts(res.data);

@@ -9,7 +9,7 @@ const HomeProducts = () => {
 
   useEffect(() => {
     axios
-      .get("https://secret-brook-42211.herokuapp.com/products")
+      .get("https://arcane-atoll-77815.herokuapp.com/products")
       .then((res) => {
         if (res.status === 200) {
           setProducts(res.data.slice(0, 6));

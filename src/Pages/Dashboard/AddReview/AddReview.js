@@ -17,7 +17,7 @@ const AddReview = () => {
     event.preventDefault();
 
     axios
-      .post("https://secret-brook-42211.herokuapp.com/reviews", data, {
+      .post("https://arcane-atoll-77815.herokuapp.com/reviews", data, {
         headers: { "content-type": "application/json" },
       })
       .then((res) => {

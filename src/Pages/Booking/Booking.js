@@ -21,7 +21,7 @@ const Booking = () => {
   useEffect(() => {
     axios
       .get(
-        `https://secret-brook-42211.herokuapp.com/singleProduct/${productId}`
+        `https://arcane-atoll-77815.herokuapp.com/singleProduct/${productId}`
       )
       .then((res) => {
         if (res.status === 200) {
@@ -51,7 +51,7 @@ const Booking = () => {
     setCompleted(false);
     data.email = email;
     axios
-      .post("https://secret-brook-42211.herokuapp.com/confirmOrder", data, {
+      .post("https://arcane-atoll-77815.herokuapp.com/confirmOrder", data, {
         headers: { "content-type": "application/json" },
       })
       .then((res) => {

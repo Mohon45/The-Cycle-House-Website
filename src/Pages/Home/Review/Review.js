@@ -8,7 +8,7 @@ const Review = () => {
 
   useEffect(() => {
     axios
-      .get("https://secret-brook-42211.herokuapp.com/reviews")
+      .get("https://arcane-atoll-77815.herokuapp.com/reviews")
       .then((res) => {
         if (res.status === 200) {
           setReviews(res.data);

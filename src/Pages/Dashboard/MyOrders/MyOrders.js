@@ -13,7 +13,7 @@ const MyOrders = () => {
 
   useEffect(() => {
     axios
-      .get("https://secret-brook-42211.herokuapp.com/bookings")
+      .get("https://arcane-atoll-77815.herokuapp.com/bookings")
       .then((res) => {
         if (res.status === 200) {
           const result = res.data.filter((item) => item.email === userEmail);
@@ -30,7 +30,7 @@ const MyOrders = () => {
   };
 
   const handleDelete = (id) => {
-    fetch(`https://secret-brook-42211.herokuapp.com/delteOrder/${id}`, {
+    fetch(`https://arcane-atoll-77815.herokuapp.com/delteOrder/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
