@@ -6,6 +6,7 @@ import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
+  console.log(user);
   return (
     <Fragment className="topbar">
       <nav className="navbar navbar-expand-lg header-bg-color">

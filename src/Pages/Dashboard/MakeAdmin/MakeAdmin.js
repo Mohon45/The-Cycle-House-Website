@@ -10,7 +10,7 @@ const MakeAdmin = () => {
   };
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("https://arcane-atoll-77815.herokuapp.com/users/admin", {
+    fetch("https://cycle-house.onrender.com/api/v1/cycle-house/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

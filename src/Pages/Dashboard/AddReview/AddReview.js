@@ -17,9 +17,13 @@ const AddReview = () => {
     event.preventDefault();
 
     axios
-      .post("https://arcane-atoll-77815.herokuapp.com/reviews", data, {
-        headers: { "content-type": "application/json" },
-      })
+      .post(
+        "https://cycle-house.onrender.com/api/v1/cycle-house/review",
+        data,
+        {
+          headers: { "content-type": "application/json" },
+        }
+      )
       .then((res) => {
         if (res.status === 200) {
           event.target.reset();

@@ -72,7 +72,9 @@ const useFirebase = () => {
   }, [auth]);
 
   useEffect(() => {
-    fetch(`https://arcane-atoll-77815.herokuapp.com/users/${user.email}`)
+    fetch(
+      `https://cycle-house.onrender.com/api/v1/cycle-house/users/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -91,7 +93,7 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("https://arcane-atoll-77815.herokuapp.com/users", {
+    fetch("https://cycle-house.onrender.com/api/v1/cycle-house/users", {
       method: method,
       headers: {
         "content-type": "application/json",

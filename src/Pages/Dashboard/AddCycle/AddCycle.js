@@ -10,7 +10,7 @@ const AddCycle = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("https://arcane-atoll-77815.herokuapp.com/addServices", {
+    fetch("https://cycle-house.onrender.com/api/v1/cycle-house/product", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

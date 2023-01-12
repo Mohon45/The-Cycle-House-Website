@@ -9,10 +9,10 @@ const HomeProducts = () => {
 
   useEffect(() => {
     axios
-      .get("https://arcane-atoll-77815.herokuapp.com/products")
+      .get("https://cycle-house.onrender.com/api/v1/cycle-house/products")
       .then((res) => {
         if (res.status === 200) {
-          setProducts(res.data.slice(0, 6));
+          setProducts(res.data.products.slice(0, 6));
         }
       })
       .catch((error) => {

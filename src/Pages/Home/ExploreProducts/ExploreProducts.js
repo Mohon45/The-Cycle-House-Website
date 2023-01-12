@@ -13,10 +13,10 @@ const ExploreProducts = () => {
   useEffect(() => {
     setTimeout(() => {
       axios
-        .get("https://arcane-atoll-77815.herokuapp.com/products")
+        .get("https://cycle-house.onrender.com/api/v1/cycle-house/products")
         .then((res) => {
           if (res.status === 200) {
-            setProducts(res.data);
+            setProducts(res.data.products);
             setLoading(true);
 
             setTimeout(() => {

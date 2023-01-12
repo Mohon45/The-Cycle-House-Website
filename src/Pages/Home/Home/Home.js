@@ -15,7 +15,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       axios
-        .get("https://arcane-atoll-77815.herokuapp.com/products")
+        .get("https://cycle-house.onrender.com/api/v1/cycle-house/products")
         .then((res) => {
           if (res.status === 200) {
             setLoading(true);

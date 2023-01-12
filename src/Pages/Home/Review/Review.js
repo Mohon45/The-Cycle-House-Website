@@ -8,14 +8,14 @@ const Review = () => {
 
   useEffect(() => {
     axios
-      .get("https://arcane-atoll-77815.herokuapp.com/reviews")
+      .get("https://cycle-house.onrender.com/api/v1/cycle-house/reviews")
       .then((res) => {
         if (res.status === 200) {
-          setReviews(res.data);
+          setReviews(res.data.reviews);
         }
       })
       .catch((error) => {
-        console.log(error.response);
+        console.log(error);
       });
   }, []);
 
@@ -32,7 +32,7 @@ const Review = () => {
 
       <div className="mt-5">
         <Carousel breakPoints={breakPoints}>
-          {reviews.map((item, index) => (
+          {reviews?.map((item, index) => (
             <div className="card single-review-card" key={index}>
               <div className="card-body">
                 <img src={item.image} alt="" />

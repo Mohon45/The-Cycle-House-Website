@@ -9,14 +9,17 @@ const MyOrders = () => {
   const [control, setControl] = useState(false);
   const { user } = useAuth();
   const userEmail = user.email;
-  console.log(products);
 
   useEffect(() => {
     axios
-      .get("https://arcane-atoll-77815.herokuapp.com/bookings")
+      .get(
+        `https://cycle-house.onrender.com/api/v1/cycle-house/myOrder/${userEmail}`
+      )
       .then((res) => {
         if (res.status === 200) {
-          const result = res.data.filter((item) => item.email === userEmail);
+          const result = res.data.myOrder.filter(
+            (item) => item.email === userEmail
+          );
           setProducts(result);
         }
       })
@@ -30,9 +33,12 @@ const MyOrders = () => {
   };
 
   const handleDelete = (id) => {
-    fetch(`https://arcane-atoll-77815.herokuapp.com/delteOrder/${id}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://cycle-house.onrender.com/api/v1/cycle-house/delteOrder/${id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount) {

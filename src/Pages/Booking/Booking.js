@@ -21,7 +21,7 @@ const Booking = () => {
   useEffect(() => {
     axios
       .get(
-        `https://arcane-atoll-77815.herokuapp.com/singleProduct/${productId}`
+        `https://cycle-house.onrender.com/api/v1/cycle-house/singleProduct/${productId}`
       )
       .then((res) => {
         if (res.status === 200) {
@@ -51,9 +51,13 @@ const Booking = () => {
     setCompleted(false);
     data.email = email;
     axios
-      .post("https://arcane-atoll-77815.herokuapp.com/confirmOrder", data, {
-        headers: { "content-type": "application/json" },
-      })
+      .post(
+        "https://cycle-house.onrender.com/api/v1/cycle-house/confirmOrder",
+        data,
+        {
+          headers: { "content-type": "application/json" },
+        }
+      )
       .then((res) => {
         if (res.status === 200) {
           toast.success("Order Successfully Plase!");
