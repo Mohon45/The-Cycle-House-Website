@@ -25,7 +25,7 @@ const Booking = () => {
       )
       .then((res) => {
         if (res.status === 200) {
-          setProduct(res.data);
+          setProduct(res.data.product);
           setLoading(true);
 
           setTimeout(() => {

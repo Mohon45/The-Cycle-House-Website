@@ -13,16 +13,14 @@ const Home = () => {
   const [completed, setCompleted] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     setTimeout(() => {
       axios
         .get("https://cycle-house.onrender.com/api/v1/cycle-house/products")
         .then((res) => {
           if (res.status === 200) {
-            setLoading(true);
-
-            setTimeout(() => {
-              setCompleted(true);
-            }, 1000);
+            setLoading(false);
+            setCompleted(true);
           }
         })
         .catch((error) => {
