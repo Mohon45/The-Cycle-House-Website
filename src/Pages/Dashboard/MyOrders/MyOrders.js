@@ -65,7 +65,7 @@ const MyOrders = () => {
                 <th className="text-center">Action</th>
               </tr>
             </thead>
-            <tbody class="table-group-divider cus-desg">
+            <tbody className="table-group-divider cus-desg">
               {products.map((product, index) => (
                 <tr>
                   <td className="text-center">{index + 1}</td>

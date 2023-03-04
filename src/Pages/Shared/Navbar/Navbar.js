@@ -6,9 +6,8 @@ import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
-  console.log(user);
   return (
-    <Fragment className="topbar">
+    <React.Fragment className="topbar">
       <nav className="navbar navbar-expand-lg header-bg-color">
         <div className="container">
           <a className="navbar-brand nav-image" href="/">
@@ -64,7 +63,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    </Fragment>
+    </React.Fragment>
   );
 };
 

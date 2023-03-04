@@ -20,7 +20,7 @@ const Home = () => {
         .then((res) => {
           if (res.status === 200) {
             setLoading(false);
-            setCompleted(true);
+            // setCompleted(true);
           }
         })
         .catch((error) => {
@@ -31,8 +31,8 @@ const Home = () => {
 
   return (
     <div>
-      {!completed ? (
-        <>{!loading ? <Spinner /> : <CompleteSymbol />}</>
+      {loading ? (
+        <Spinner />
       ) : (
         <div style={{ backgroundColor: "#E8E8E8" }}>
           <Banner></Banner>

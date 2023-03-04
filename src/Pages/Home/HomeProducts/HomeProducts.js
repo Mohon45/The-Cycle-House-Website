@@ -25,15 +25,15 @@ const HomeProducts = () => {
       <h1 className="my-5">Our ByCycles</h1>
 
       <div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div className="row row-cols-1 row-cols-md-3 g-4">
           {products.map((item, index) => (
-            <div class="col" key={index}>
+            <div className="col" key={index}>
               <Link to={`/booking/${item._id}`} className="link-card">
-                <div class="card h-100 single-product hover-effect">
-                  <img src={item.img} class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title">{item.name}</h5>
-                    <p class="card-text">{item.desc.slice(0, 100)} ...</p>
+                <div className="card h-100 single-product hover-effect">
+                  <img src={item.img} className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <h5 className="card-title">{item.name}</h5>
+                    <p className="card-text">{item.desc.slice(0, 100)} ...</p>
                     <div className="product-rating">
                       <DynamicStar
                         rating={item.rating}
